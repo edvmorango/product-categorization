@@ -1,7 +1,7 @@
 package app
 
 import config.SparkConfBuilder
-import jobs.NasaRequestJob
+import jobs.{CategorizationJob}
 import org.apache.spark.SparkContext
 
 object Main {
@@ -10,9 +10,9 @@ object Main {
 
     val sc = new SparkContext(SparkConfBuilder.defaultConfiguration)
 
-//    val job = NasaRequestJob(sc)
-//
-//    job.execute()
+    val job = CategorizationJob(sc)
+
+    job.execute()
 
   }
 
